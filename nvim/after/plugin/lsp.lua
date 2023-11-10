@@ -53,6 +53,8 @@ lsp_zero.on_attach(function(client, bufnr)
 
     vim.keymap.set("n", "gn", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "gp", function() vim.diagnostic.goto_prev() end, opts)
+    vim.keymap.set("n", "<leader>gr", vim.lsp.buf.rename, opts)
+    vim.keymap.set("n", "<leader>ga", vim.lsp.buf.code_action, opts)
 end)
 
 lspconfig.eslint.setup({
@@ -61,4 +63,11 @@ lspconfig.eslint.setup({
             buffer = bufnr, command = "EslintFixAll"
         })
     end
+})
+
+lsp_zero.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
 })
