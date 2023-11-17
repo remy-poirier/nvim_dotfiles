@@ -48,13 +48,14 @@ cmp.setup({
 })
 
 lsp_zero.on_attach(function(client, bufnr)
-    lsp_zero.default_keymaps({ buffer = bufnr })
-    local opts = { buffer = bufnr, remap = false }
+  lsp_zero.default_keymaps({ buffer = bufnr })
+  local opts = { buffer = bufnr, remap = false }
 
-    vim.keymap.set("n", "gn", function() vim.diagnostic.goto_next() end, opts)
-    vim.keymap.set("n", "gp", function() vim.diagnostic.goto_prev() end, opts)
-    vim.keymap.set("n", "<leader>gr", vim.lsp.buf.rename, opts)
-    vim.keymap.set("n", "<leader>ga", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "gn", function() vim.diagnostic.goto_next() end, opts)
+  vim.keymap.set("n", "gp", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "<leader>gr", vim.lsp.buf.rename, opts)
+  vim.keymap.set("n", "<leader>ga", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, opts)
 end)
 
 lspconfig.eslint.setup({
