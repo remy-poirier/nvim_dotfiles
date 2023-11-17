@@ -6,3 +6,7 @@ vim.keymap.set('n', '<leader>fr', function()
  builtin.oldfiles({only_cwd = true})
 end, {})
 vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
+
+-- remap some of the tsserver default keybindings that do not working as expected with monorepo
+vim.keymap.set('n', 'gd', builtin.lsp_definitions, {})
+vim.keymap.set('n', 'gr', builtin.lsp_references, {})
