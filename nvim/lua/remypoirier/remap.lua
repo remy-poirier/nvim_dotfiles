@@ -17,6 +17,7 @@ vim.keymap.set("n", "n", "nzzzv")
 
 -- Will paste word and will keep it in buffer clipboard (it will not be replaced by deleted word)
 vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("v", "<leader>p", "\"_dP")
 
 -- Will paste item from system clipboad inside buffer
 vim.keymap.set("n", "<S-p>", "\"*p")
