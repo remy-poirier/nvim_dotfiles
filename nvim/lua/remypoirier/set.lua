@@ -20,3 +20,5 @@ vim.opt.scrolloff = 8
 vim.g.mapleader = " "
 
 vim.opt.updatetime = 50
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99

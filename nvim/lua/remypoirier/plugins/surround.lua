@@ -1,1 +1,1 @@
-return { "tpope/vim-surround" }
+return { "kylechui/nvim-surround" }
