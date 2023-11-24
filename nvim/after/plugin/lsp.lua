@@ -26,7 +26,7 @@ local cmp_action = require('lsp-zero').cmp_action()
 
 -- Setup lsp-format that will be used then
 
-require("lsp-format").setup {}
+-- require("lsp-format").setup {}
 
 -- Setup
 

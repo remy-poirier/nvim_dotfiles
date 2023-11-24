@@ -21,6 +21,7 @@ vim.keymap.set("v", "<leader>p", "\"_dP")
 
 -- Will paste item from system clipboad inside buffer
 vim.keymap.set("n", "<S-p>", "\"*p")
+vim.keymap.set("v", "<S-p>", "\"*p")
 
 -- Allow <leader>y to add content also to system clipboard
 vim.keymap.set("n", "<leader>y", '"+y')
