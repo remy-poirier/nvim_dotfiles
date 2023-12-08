@@ -11,6 +11,15 @@ return {
 			sync_install = false,
 			auto_install = true,
 			additional_vim_regex_highlighting = false,
+      incremental_selection = { 
+        enable = true,
+        keymaps = {
+          init_selection = "hi",
+          node_incremental = "he",
+          scope_incremental = "hc",
+          node_decremental = "hr",
+        }
+      },
 		})
 	end
 }
