@@ -2,21 +2,21 @@
 local opts = { noremap = true, silent = true }
 
 local nav_title = 'Navigation'
-local timeout = 5
+local timeout = 3
 
 function HarpoonNavNext()
   require('harpoon.ui').nav_next()
-  vim.api.nvim_command("lua vim.notify('Navigated to: ' .. vim.fn.bufname(), 'info', { title = '" .. nav_title .. "', timeout = '" .. timeout .. "' })")
+  vim.api.nvim_command("lua vim.notify('To: ' .. vim.fn.bufname(), 'info', { title = '" .. nav_title .. "', timeout = '" .. timeout .. "' })")
 end
 
 function HarpoonNavPrev()
   require('harpoon.ui').nav_prev()
-  vim.api.nvim_command("lua vim.notify('Navigated to: ' .. vim.fn.bufname(), 'info', { title = '" .. nav_title .. "', timeout = '" .. timeout .. "' })")
+  vim.api.nvim_command("lua vim.notify('To: ' .. vim.fn.bufname(), 'info', { title = '" .. nav_title .. "', timeout = '" .. timeout .. "' })")
 end
 
 function HarpoonNavToFile(file)
   require ('harpoon.ui').nav_file(file)
-  vim.api.nvim_command("lua vim.notify('Navigated to: ' .. vim.fn.bufname(), 'info', { title = '" .. nav_title .. "', timeout = '" .. timeout .. "' })")
+  vim.api.nvim_command("lua vim.notify('To: ' .. vim.fn.bufname(), 'info', { title = '" .. nav_title .. "', timeout = '" .. timeout .. "' })")
 end
 
 function HarpoonCddToMarks()
@@ -26,7 +26,7 @@ end
 
 function HarpoonClearCll()
   require('harpoon.mark').clear_all()
-  vim.api.nvim_command("lua vim.notify('Cll Harpoon marks cleared', 'success', { title = 'Sheeesh' })")
+  vim.api.nvim_command("lua vim.notify('All Harpoon marks cleared', 'success', { title = 'Sheeesh' })")
 end
 
 vim.keymap.set("n", "<leader>ha", ":lua HarpoonCddToMarks()<cr>", opts)

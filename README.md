@@ -4,6 +4,13 @@ Hello, I work as a software developer and I started to use Neovim late 2023.
 I would like to share my neovim config files here so I can re-use them on many computers. Feel free to tell me if you see some mistakes.
 This simple repository will host my neovim setup files, you can use my config by pasting content of `nvim` folder into your own `.config/nvim`, you should erase your config so there are no conflict between configs
 
+## Warning
+
+I use iTerm as my vim editor, and if you want to use the same shortcut as me, especially for split view management, you will need to do the following in iTerm:
+
+- Open Settings
+- Go to Profiles, then click on the Keys tab, and check the Right Option key as Esc+.
+
 ## Packages used
 
 - [autopairs](https://github.com/windwp/nvim-autopairs): allow parentheses and bracket to auto close when inserting one
@@ -25,7 +32,7 @@ This simple repository will host my neovim setup files, you can use my config by
 
 ## Mappings
 
-Global (re)mappings are defined in `lua/remypoirier/remap.lua`
+Global (re)mappings are defined in `lua/remypoirier/remap.lua`. These are my custom mapping and are really based on personal preferences due to my usage and keyboard layout (ISO_FR)
 Package (re)mappings are defined under `after/plugin/${plugin_name}.lua`
 
 
