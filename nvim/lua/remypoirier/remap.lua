@@ -36,3 +36,11 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- Quickfix window shortcut (used for example when using "gr" which is "go to references")
 vim.keymap.set("n", "<leader>o", "<cmd>copen<CR>")
 vim.keymap.set("n", "<leader>q", "<cmd>ccl<CR>")
+
+-- Allow split view shortcuts
+vim.keymap.set("n", "<A-v>", "<cmd>vs<CR>")
+vim.keymap.set("n", "<A-h>", "<cmd>sp<CR>")
+
+-- Allow switch from one split to another
+vim.keymap.set("n", "<A-p>", "<C-w>w")
+vim.keymap.set("n", "<A-n>", "<c-W>w")
