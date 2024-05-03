@@ -3,6 +3,7 @@ local lspconfig = require('lspconfig')
 local lua_opts = lsp_zero.nvim_lua_ls()
 
 lspconfig.lua_ls.setup(lua_opts)
+lspconfig.intelephense.setup({})
 
 lsp_zero.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
@@ -55,7 +56,8 @@ lsp_zero.on_attach(function(client, bufnr)
   vim.keymap.set("n", "gp", function() vim.diagnostic.goto_prev() end, opts)
   vim.keymap.set("n", "<leader>gr", vim.lsp.buf.rename, opts)
   vim.keymap.set("n", "ga", vim.lsp.buf.code_action, opts)
-  vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+  vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 end)
 
 lspconfig.eslint.setup({
