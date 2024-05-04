@@ -1,5 +1,4 @@
-return {
-  "folke/trouble.nvim",
+return { "folke/trouble.nvim",
   branch = "dev", -- IMPORTANT!
   keys = {
     {
@@ -9,12 +8,12 @@ return {
     },
     {
       "<leader>tn",
-      "<cmd>Trouble diagnostics next skip_groups=true jump=true",
+      "<cmd>Trouble diagnostics next skip_groups=true jump=true<cr>",
       desc = "Next Diagnostic (Trouble)",
     },
     {
       "<leader>tp",
-      "<cmd>Trouble diagnostics previous skip_groups=true jump=true",
+      "<cmd>Trouble diagnostics prev skip_groups=true jump=true<cr>",
       desc = "Previous diagnostic (Trouble)",
     }
   },
