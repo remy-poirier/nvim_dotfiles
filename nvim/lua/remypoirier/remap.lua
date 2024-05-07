@@ -44,3 +44,19 @@ vim.keymap.set("n", "<A-h>", "<cmd>sp<CR>")
 -- Allow switch from one split to another
 vim.keymap.set("n", "<A-p>", "<C-w>w")
 vim.keymap.set("n", "<A-n>", "<c-W>w")
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(ev)
+    local opts = { buffer = ev.buf }
+    vim.keymap.set("n", "gn", function() vim.diagnostic.goto_next() end, opts)
+    vim.keymap.set("n", "gp", function() vim.diagnostic.goto_prev() end, opts)
+    vim.keymap.set("n", "<leader>gr", vim.lsp.buf.rename, opts)
+    vim.keymap.set("n", "ga", vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+    vim.keymap.set("n", "grr", function() vim.lsp.buf.references() end, opts)
+
+    vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  end
+})
