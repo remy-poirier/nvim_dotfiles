@@ -43,9 +43,11 @@ return {
     vim.keymap.set("n", "<C-\">", ":lua HarpoonNavToFile(3)<cr>", opts)
     vim.keymap.set("n", "<C-'>", ":lua HarpoonNavToFile(4)<cr>", opts)
     vim.keymap.set("n", "<C-(>", ":lua HarpoonNavToFile(5)<cr>", opts)
-    vim.keymap.set("n", "<C-§>", ":lua HarpoonNavToFile(6)<cr>", opts)
-    vim.keymap.set("n", "<C-è>", ":lua HarpoonNavToFile(7)<cr>", opts)
-    vim.keymap.set("n", "<C-!>", ":lua HarpoonNavToFile(8)<cr>", opts)
-    vim.keymap.set("n", "<C-ç>", ":lua HarpoonNavToFile(2)<cr>", opts)
+
+    vim.keymap.set("n", "<C-1>", ":lua HarpoonNavToFile(1)<cr>", opts)
+    vim.keymap.set("n", "<C-2>", ":lua HarpoonNavToFile(2)<cr>", opts)
+    vim.keymap.set("n", "<C-3>", ":lua HarpoonNavToFile(3)<cr>", opts)
+    vim.keymap.set("n", "<C-4>", ":lua HarpoonNavToFile(4)<cr>", opts)
+    vim.keymap.set("n", "<C-5>", ":lua HarpoonNavToFile(5)<cr>", opts)
   end
 }
